@@ -35,31 +35,40 @@ void CaesarCipher(string message, int shift) {
         
     };
 
-    cout << result;
+    cout << "Encrypted message: " << result;
 
 }
 
 
 int main()
 {
-    int shift;
-    string message;
-    cout << "Set cypher shift (negative to decipher)\n";
-    cin >> shift;
-    cout << "Write message\n";
-    cin >> message;
+    
+    while (true) {
+        int shift;
+        string message;
+        cout << "Set cypher shift (negative to decipher)\n";
+        cin >> shift;
+        cout << "Write message\n";
+        cin >> message;
 
-    CaesarCipher(message, shift);
+        CaesarCipher(message, shift);
+
+
+        cout << "\n(a) to run again\n";
+        string again;
+        cin >> again;
+
+        if (again == "a") {
+            continue;
+        }
+        else {
+            break;
+        }
+    }
+
     
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
